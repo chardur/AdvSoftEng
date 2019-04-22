@@ -1,0 +1,13 @@
+<h1 mat-dialog-header>Add Walmart Item</h1>
+<div mat-dialog-content>
+  <mat-form-field>
+    <input matInput [(ngModel)]="buyerItem.walmartUrl" placeholder="Walmart Url" required>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="buyerItem.price" placeholder="Desired Price" required>
+  </mat-form-field>
+</div>
+<div mat-dialog-footer>
+  <button mat-raised-button color="primary" style="margin-right: 3%" (click)="addBuyerItem()">Add Item</button>
+  <button mat-raised-button (click)="cancel()">Cancel</button>
+</div>

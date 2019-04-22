@@ -1,0 +1,25 @@
+<!-- top 5 tool -->
+<div>
+  <mat-card>
+    <mat-card-header class="top5-header">
+      <mat-card-title>Top 5 buyer requested items:</mat-card-title>
+      <mat-card-subtitle>Get inventory that sells!</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <table class="table table-responsive table-hover" style="width: 100%;">
+        <thead>
+        <tr>
+          <th style="width: 50%">Item</th>
+          <th style="width: 50%">Requests</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let item of top5">
+          <td>{{item.name}}</td>
+          <td>{{item.quantity}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </mat-card-content>
+  </mat-card>
+</div>

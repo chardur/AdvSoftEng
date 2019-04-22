@@ -1,0 +1,14 @@
+<mat-card>
+  <mat-card-header class="historical-header">
+    <mat-card-title>Historical prices:</mat-card-title>
+    <mat-card-subtitle>Gain insights using historical prices and forecasts</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <p>Selected Item ID: {{itemId}}</p>
+    <div>
+      <canvas baseChart [chartType]="'line'" [datasets]="chartData" [labels]="chartLabels" [options]="chartOptions"
+              [legend]="true">
+      </canvas>
+    </div>
+  </mat-card-content>
+</mat-card>

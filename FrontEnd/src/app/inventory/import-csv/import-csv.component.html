@@ -1,0 +1,22 @@
+<div>
+<table class="table table-responsive table-hover" style="width : 90%;">
+  <tbody>
+  <ng-container *ngFor="let csvRec of csvRecords;let i=index">
+    <tr>
+      <ng-container *ngFor="let data of csvRec;let j=index">
+        <td>{{data}}</td>
+      </ng-container>
+    </tr>
+  </ng-container>
+  </tbody>
+</table>
+</div>
+<div class="input-group">
+  <div class="custom-file">
+    <input type="file" class="upload" id="inputGroupFile04" (change)="fileListener($event.target.files)">
+    <label class="custom-file-label" for="inputGroupFile04">{{fileName}}</label>
+  </div>
+  <div class="input-group-append">
+    <button class="btn btn-outline-secondary" type="button" (click)="importProducts()">Import</button>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+.tableContainer {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+
+.search-card {
+  padding: 2px;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-card-helper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+.btn-green {
+  background-color: green;
+  border-color: green;
+}

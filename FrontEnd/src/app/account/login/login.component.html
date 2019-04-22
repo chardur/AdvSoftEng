@@ -1,0 +1,17 @@
+        <mat-form-field appearance="outline">
+          <mat-label>Username</mat-label>
+          <input matInput placeholder="" [(ngModel)]="username" id="usernameInput">
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          <mat-hint>Max 50 Characters</mat-hint>
+        </mat-form-field>
+    <br />
+        <mat-form-field type="password" appearance="outline">
+          <mat-label>Password</mat-label>
+          <input matInput placeholder="" [type]="hide ? 'password' : 'text'">
+          <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          <mat-hint>Case sensitive. No spaces</mat-hint>
+        </mat-form-field>
+    <br />
+    <button mat-raised-button color="primary" (click)="login()" id="loginButton">Log In</button>
+
+

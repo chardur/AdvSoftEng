@@ -1,0 +1,26 @@
+.chart-table {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+.chart-left {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  width: 50%;
+  padding: 1rem;
+}
+.doughnut-right {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  width: 50%;
+  padding: 1rem;
+}
+
+.table-bottom {
+  width: 45%;
+  clear: both;
+  bottom: 0;
+}

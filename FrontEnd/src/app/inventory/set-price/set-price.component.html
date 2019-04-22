@@ -1,0 +1,19 @@
+<mat-card>
+  <mat-card-header class="price-header">
+    <mat-card-title>Set price targets for your inventory:</mat-card-title>
+    <mat-card-subtitle>We'll let you know when the target is reached</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <p>Selected Item ID: {{itemId}}</p>
+    <mat-form-field>
+      <mat-label>Update the price:</mat-label>
+      <input [(ngModel)]="setPriceTargetData.price" matInput type="number">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <mat-label>Update the Cost:</mat-label>
+      <input [(ngModel)]="setPriceTargetData.sellerCost" matInput type="number">
+    </mat-form-field>
+  </mat-card-content>
+  <button mat-raised-button color="primary" [disabled]="! isSellerItem" (click)="setPriceTarget()">Save/Update</button>
+</mat-card>

@@ -1,0 +1,24 @@
+<mat-form-field appearance="outline">
+  <mat-label>Change Email</mat-label>
+  <input matInput placeholder="">
+  <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+</mat-form-field>
+
+<br />
+<button mat-raised-button color="primary" routerLink="/dashboard">Verify Email</button>
+<p></p>
+<mat-form-field type="password" appearance="outline">
+  <mat-label>Change Password</mat-label>
+  <input matInput placeholder="" [type]="hide ? 'password' : 'text'">
+  <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+
+</mat-form-field>
+<mat-form-field type="password" appearance="outline">
+  <mat-label>Repeat Password</mat-label>
+  <input matInput placeholder="" [type]="hide ? 'password' : 'text'">
+  <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+
+</mat-form-field>
+<br />
+<!-- <button mat-raised-button>Register</button> -->
+<button mat-raised-button color="primary" routerLink="/dashboard">Save New Password</button>

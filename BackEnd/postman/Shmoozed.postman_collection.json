@@ -1,0 +1,3191 @@
+{
+	"info": {
+		"_postman_id": "484a8850-552b-42a0-b4e2-1a0c38c37797",
+		"name": "Shmoozed",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Production",
+			"item": [
+				{
+					"name": "Actuator",
+					"item": [
+						{
+							"name": "Actuator",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://api.shmoozed.com:9000/actuator",
+									"protocol": "http",
+									"host": [
+										"api",
+										"shmoozed",
+										"com"
+									],
+									"port": "9000",
+									"path": [
+										"actuator"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Actuator HTTP Trace",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://api.shmoozed.com:9000/actuator/configprops",
+									"protocol": "http",
+									"host": [
+										"api",
+										"shmoozed",
+										"com"
+									],
+									"port": "9000",
+									"path": [
+										"actuator",
+										"configprops"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Actuator Metrics",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://api.shmoozed.com:9000/actuator/metrics",
+									"protocol": "http",
+									"host": [
+										"api",
+										"shmoozed",
+										"com"
+									],
+									"port": "9000",
+									"path": [
+										"actuator",
+										"metrics"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Actuator Health",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://api.shmoozed.com:9000/actuator/health",
+									"protocol": "http",
+									"host": [
+										"api",
+										"shmoozed",
+										"com"
+									],
+									"port": "9000",
+									"path": [
+										"actuator",
+										"health"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Alert",
+					"item": [
+						{
+							"name": "Get All for User - /alert?userId={user_id}",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "{{auth_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://api.shmoozed.com/alert?userId={user_id}",
+									"protocol": "http",
+									"host": [
+										"api",
+										"shmoozed",
+										"com"
+									],
+									"path": [
+										"alert"
+									],
+									"query": [
+										{
+											"key": "userId",
+											"value": "{user_id}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Alert Item - /alert/{alert_id}",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{auth_token}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://api.shmoozed.com/alert/{alert_id}",
+									"protocol": "http",
+									"host": [
+										"api",
+										"shmoozed",
+										"com"
+									],
+									"path": [
+										"alert",
+										"{alert_id}"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "Alerts are used to notify the users that a potential deal can be made with a buyer/user",
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Buyer Items",
+					"item": [
+						{
+							"name": "Get All - /item/buyer",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{auth_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://api.shmoozed.com/item/buyer",
+									"protocol": "http",
+									"host": [
+										"api",
+										"shmoozed",
+										"com"
+									],
+									"path": [
+										"item",
+										"buyer"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All for Buyer - /item/buyer/{buyer_id}",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{auth_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://api.shmoozed.com/item/buyer/1",
+									"protocol": "http",
+									"host": [
+										"api",
+										"shmoozed",
+										"com"
+									],
+									"path": [
+										"item",
+										"buyer",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All (Detailed) for Buyer - /item/buyer/{buyer_id}/details",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{auth_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://api.shmoozed.com/item/buyer/:buyer_id/details",
+									"protocol": "http",
+									"host": [
+										"api",
+										"shmoozed",
+										"com"
+									],
+									"path": [
+										"item",
+										"buyer",
+										":buyer_id",
+										"details"
+									],
+									"variable": [
+										{
+											"key": "buyer_id",
+											"value": "2",
+											"description": "The ID of the Buyer"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add New Buyer Item - /item/buyer",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{auth_token}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"itemId\": 1,\n\t\"price\": 15.50,\n\t\"userId\": 2\n}"
+								},
+								"url": {
+									"raw": "http://api.shmoozed.com/item/buyer",
+									"protocol": "http",
+									"host": [
+										"api",
+										"shmoozed",
+										"com"
+									],
+									"path": [
+										"item",
+										"buyer"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Buyer Item - /item/buyer/{buyer_item_id}",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{auth_token}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://api.shmoozed.com/item/buyer/3",
+									"protocol": "http",
+									"host": [
+										"api",
+										"shmoozed",
+										"com"
+									],
+									"path": [
+										"item",
+										"buyer",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Reset Notification - /buyer/alert/{item_id}",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "test"
+									},
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 1222,\n    \"itemId\": 91,\n    \"price\": 5.62,\n    \"userId\": 65,\n    \"notifyUser\": true\n}"
+								},
+								"url": {
+									"raw": "http://api.shmoozed.com/item/buyer/alert/91",
+									"protocol": "http",
+									"host": [
+										"api",
+										"shmoozed",
+										"com"
+									],
+									"path": [
+										"item",
+										"buyer",
+										"alert",
+										"91"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "ItemPriceHistory",
+					"item": [
+						{
+							"name": "Add New ItemPriceHistory - /itemhistory",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"itemId\": 1,\n    \"price\": 39.94,\n    \"date\": \"2018-11-21T05:09:05.000+0000\",\n    \"lastUpdateDate\": \"2018-11-21T05:09:05.000+0000\"\n}"
+								},
+								"url": {
+									"raw": "http://api.shmoozed.com/itemhistory",
+									"protocol": "http",
+									"host": [
+										"api",
+										"shmoozed",
+										"com"
+									],
+									"path": [
+										"itemhistory"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All ItemPriceHistory by Id - /itemhistory/{item_id}",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://api.shmoozed.com/itemhistory/3",
+									"protocol": "http",
+									"host": [
+										"api",
+										"shmoozed",
+										"com"
+									],
+									"path": [
+										"itemhistory",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All - /itemhistory",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://api.shmoozed.com/itemhistory",
+									"protocol": "http",
+									"host": [
+										"api",
+										"shmoozed",
+										"com"
+									],
+									"path": [
+										"itemhistory"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Search",
+					"item": [
+						{
+							"name": "Search - /search/{searchterm}",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://api.shmoozed.com/search/xbox",
+									"protocol": "http",
+									"host": [
+										"api",
+										"shmoozed",
+										"com"
+									],
+									"path": [
+										"search",
+										"xbox"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "SellerInsight",
+					"item": [
+						{
+							"name": "Get Revenue - /sellerinsight/{itemId}",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://api.shmoozed.com/sellerinsight/92",
+									"protocol": "http",
+									"host": [
+										"api",
+										"shmoozed",
+										"com"
+									],
+									"path": [
+										"sellerinsight",
+										"92"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Profit - /selerinsight/profit/{itemId}/{cost}",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://api.shmoozed.com/sellerinsight/profit/92/100",
+									"protocol": "http",
+									"host": [
+										"api",
+										"shmoozed",
+										"com"
+									],
+									"path": [
+										"sellerinsight",
+										"profit",
+										"92",
+										"100"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Seller Items",
+					"item": [
+						{
+							"name": "Get All - /item/seller",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{auth_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://api.shmoozed.com/item/seller",
+									"protocol": "http",
+									"host": [
+										"api",
+										"shmoozed",
+										"com"
+									],
+									"path": [
+										"item",
+										"seller"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All for Seller - /item/seller/{seller_id}",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{auth_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://api.shmoozed.com/item/seller/1",
+									"protocol": "http",
+									"host": [
+										"api",
+										"shmoozed",
+										"com"
+									],
+									"path": [
+										"item",
+										"seller",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All (Detailed) for Seller - /item/seller/{seller_id}/details",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{auth_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://api.shmoozed.com/item/seller/:seller_id/details",
+									"protocol": "http",
+									"host": [
+										"api",
+										"shmoozed",
+										"com"
+									],
+									"path": [
+										"item",
+										"seller",
+										":seller_id",
+										"details"
+									],
+									"variable": [
+										{
+											"key": "seller_id",
+											"value": "2",
+											"description": "The ID of the Seller"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add New Seller Item - /item/seller",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{auth_token}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"itemId\": 1,\n\t\"price\": 15.50,\n\t\"userId\": 2\n}"
+								},
+								"url": {
+									"raw": "http://api.shmoozed.com/item/seller",
+									"protocol": "http",
+									"host": [
+										"api",
+										"shmoozed",
+										"com"
+									],
+									"path": [
+										"item",
+										"seller"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Seller Item - /item/seller/{seller_item_id}",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{auth_token}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://api.shmoozed.com/item/seller/1",
+									"protocol": "http",
+									"host": [
+										"api",
+										"shmoozed",
+										"com"
+									],
+									"path": [
+										"item",
+										"seller",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://api.shmoozed.com/item/seller/update/:item_id",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"itemId\": 90,\n\t\"price\": 19.50,\n\t\"userId\": 2,\n\t\"sellerCost\":240.45\n}"
+								},
+								"url": {
+									"raw": "http://api.shmoozed.com/item/seller/update/:item_id",
+									"protocol": "http",
+									"host": [
+										"api",
+										"shmoozed",
+										"com"
+									],
+									"path": [
+										"item",
+										"seller",
+										"update",
+										":item_id"
+									],
+									"variable": [
+										{
+											"key": "item_id",
+											"value": "90"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "User",
+					"item": [
+						{
+							"name": "/user/authorization",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{auth_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://api.shmoozed.com/user/authorization",
+									"protocol": "http",
+									"host": [
+										"api",
+										"shmoozed",
+										"com"
+									],
+									"path": [
+										"user",
+										"authorization"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/user/username/{username}",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{auth_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://api.shmoozed.com/user/username/oneWorkingExample",
+									"protocol": "http",
+									"host": [
+										"api",
+										"shmoozed",
+										"com"
+									],
+									"path": [
+										"user",
+										"username",
+										"oneWorkingExample"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All - /user",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{auth_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://api.shmoozed.com/user",
+									"protocol": "http",
+									"host": [
+										"api",
+										"shmoozed",
+										"com"
+									],
+									"path": [
+										"user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add New User - /user",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{auth_token}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"firstName\" : \"Test\",\n\t\"lastName\" : \"McTesterson\",\n\t\"email\" : \"test@test.com\",\n\t\"password\" : \"MySuperSecretPassword\",\n\t\"username\" : \"test.mctester\"\n}"
+								},
+								"url": {
+									"raw": "http://api.shmoozed.com/user",
+									"protocol": "http",
+									"host": [
+										"api",
+										"shmoozed",
+										"com"
+									],
+									"path": [
+										"user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get User By ID - /user/{id}",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{auth_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://api.shmoozed.com/user/1",
+									"protocol": "http",
+									"host": [
+										"api",
+										"shmoozed",
+										"com"
+									],
+									"path": [
+										"user",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete User By ID - /user/{id}",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{auth_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://api.shmoozed.com/user/1",
+									"protocol": "http",
+									"host": [
+										"api",
+										"shmoozed",
+										"com"
+									],
+									"path": [
+										"user",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "User Role",
+					"item": [
+						{
+							"name": "Get UserRole By UserRoleID - /userrole/{userRoleid}",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{auth_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://api.shmoozed.com/userrole/10002",
+									"protocol": "http",
+									"host": [
+										"api",
+										"shmoozed",
+										"com"
+									],
+									"path": [
+										"userrole",
+										"10002"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All UserRoles By UserID - /userrole/getallrolesforuserid/{userId}",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{auth_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:5000/userrole/getallrolesforuserid/2",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"userrole",
+										"getallrolesforuserid",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "User is Buyer - /userrole/userisbuyer/{user_id}",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{auth_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://api.shmoozed.com/userrole/userisbuyer/3",
+									"protocol": "http",
+									"host": [
+										"api",
+										"shmoozed",
+										"com"
+									],
+									"path": [
+										"userrole",
+										"userisbuyer",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "User is Seller - /userrole/userisseller/{user_id}",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{auth_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:5000/userrole/userisbuyer/3",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"userrole",
+										"userisbuyer",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "User is Admin - /userrole/userisadmin/{user_id}",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{auth_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:5000/userrole/userisadmin/3",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"userrole",
+										"userisadmin",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add New User Role - /userrole",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{auth_token}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"user_Id\" : 3,\n\t\"role_Id\" : 2\n}"
+								},
+								"url": {
+									"raw": "localhost:5000/userrole",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"userrole"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete UserRole By UserRoleID - /userrole/{userRoleid}",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{auth_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:5000/userrole/10003",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"userrole",
+										"10003"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Walmart",
+					"item": [
+						{
+							"name": "Get WalmartItem by Id - /walmart/itemid/{item_id}",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://api.shmoozed.com/walmart/itemid/814913483",
+									"protocol": "http",
+									"host": [
+										"api",
+										"shmoozed",
+										"com"
+									],
+									"path": [
+										"walmart",
+										"itemid",
+										"814913483"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add New WalmartItem by Url - /walmart/url",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "aaa",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "\"https://www.walmart.com/ip/Lego-Classic-Bricks-On-A-Roll-10715-60Th-Anniversary-Limited-Edition/867645281\""
+								},
+								"url": {
+									"raw": "http://api.shmoozed.com/walmart/url",
+									"protocol": "http",
+									"host": [
+										"api",
+										"shmoozed",
+										"com"
+									],
+									"path": [
+										"walmart",
+										"url"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add New WalmartItem by BuyerDetails - /walmart/buyerdetails",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "\"https://www.walmart.com/ip/Lego-Classic-Bricks-On-A-Roll-10715-60Th-Anniversary-Limited-Edition/867645281\""
+								},
+								"url": {
+									"raw": "http://api.shmoozed.com/walmart/urlbuyerdetails?quantity=2&price=19.99&userId=2",
+									"protocol": "http",
+									"host": [
+										"api",
+										"shmoozed",
+										"com"
+									],
+									"path": [
+										"walmart",
+										"urlbuyerdetails"
+									],
+									"query": [
+										{
+											"key": "quantity",
+											"value": "2"
+										},
+										{
+											"key": "price",
+											"value": "19.99"
+										},
+										{
+											"key": "userId",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Search WalmartItem - /walmart/search/{searchterm}",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://api.shmoozed.com/walmart/search/xbox",
+									"protocol": "http",
+									"host": [
+										"api",
+										"shmoozed",
+										"com"
+									],
+									"path": [
+										"walmart",
+										"search",
+										"xbox"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "fc0c2d5b-b4fb-40e1-910d-7e3f155aa308",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "aa34f88c-bc43-4fa2-a632-dbcb12a6be9e",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "/example/item",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://api.shmoozed.com/example/item",
+							"protocol": "http",
+							"host": [
+								"api",
+								"shmoozed",
+								"com"
+							],
+							"path": [
+								"example",
+								"item"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/example/item/names?partial=Item",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://api.shmoozed.com/example/item/names?partial=Item",
+							"protocol": "http",
+							"host": [
+								"api",
+								"shmoozed",
+								"com"
+							],
+							"path": [
+								"example",
+								"item",
+								"names"
+							],
+							"query": [
+								{
+									"key": "partial",
+									"value": "Item"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/example/item",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\" : \"Inserted Item 3\",\n\t\"quantity\" : 3\n}"
+						},
+						"url": {
+							"raw": "http://api.shmoozed.com/example/item",
+							"protocol": "http",
+							"host": [
+								"api",
+								"shmoozed",
+								"com"
+							],
+							"path": [
+								"example",
+								"item"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/example/item/5",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://api.shmoozed.com/example/item/5",
+							"protocol": "http",
+							"host": [
+								"api",
+								"shmoozed",
+								"com"
+							],
+							"path": [
+								"example",
+								"item",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Local",
+			"item": [
+				{
+					"name": "Actuator",
+					"item": [
+						{
+							"name": "Actuator",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:9000/actuator",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"actuator"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Actuator Health",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:9000/actuator/health",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"actuator",
+										"health"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Actuator HTTP Trace",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:9000/actuator/configprops",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"actuator",
+										"configprops"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Actuator Metrics",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:9000/actuator/metrics",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"actuator",
+										"metrics"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Alert",
+					"item": [
+						{
+							"name": "Get All for User - /alert?userId={user_id}",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "{{auth_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:5000/alert?userId=2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"alert"
+									],
+									"query": [
+										{
+											"key": "userId",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Alert - /alert/{alert_id}",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "{{auth_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:5000/alert/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"alert",
+										"3"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Buyer Items",
+					"item": [
+						{
+							"name": "Get All - /item/buyer",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{auth_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:5000/item/buyer",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"item",
+										"buyer"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All for Buyer - /item/buyer/{buyer_id}",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{auth_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:5000/item/buyer/65",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"item",
+										"buyer",
+										"65"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All (Detailed) for Buyer - /item/buyer/{buyer_id}/details",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{auth_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:5000/item/buyer/:buyer_id/details",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"item",
+										"buyer",
+										":buyer_id",
+										"details"
+									],
+									"variable": [
+										{
+											"key": "buyer_id",
+											"value": "2",
+											"description": "The ID of the Buyer"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add New Buyer Item - /item/buyer",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{auth_token}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"itemId\": 1,\n\t\"price\": 15.50,\n\t\"userId\": 2\n}"
+								},
+								"url": {
+									"raw": "http://localhost:5000/item/buyer",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"item",
+										"buyer"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get all Alerts for Buyer",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{auth_token}}",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:5000/item/buyer/alert/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"item",
+										"buyer",
+										"alert",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Buyer Item - /item/buyer/{buyer_item_id}",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{auth_token}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:5000/item/buyer/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"item",
+										"buyer",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Reset Notification - /buyer/alert/{item_id}",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "test",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 1222,\n    \"itemId\": 91,\n    \"price\": 5.62,\n    \"userId\": 65,\n    \"notifyUser\": true\n}"
+								},
+								"url": {
+									"raw": "http://localhost:5000/item/buyer/alert/91",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"item",
+										"buyer",
+										"alert",
+										"91"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "ItemPriceHistory",
+					"item": [
+						{
+							"name": "Add New ItemPriceHistory - /itemhistory",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"itemId\": 1,\n    \"price\": 39.94,\n    \"date\": \"2018-11-21T05:09:05.000+0000\",\n    \"lastUpdateDate\": \"2018-11-21T05:09:05.000+0000\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:5000/itemhistory",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"itemhistory"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All ItemPriceHistory by Id - /itemhistory/{item_id}",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:5000/itemhistory/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"itemhistory",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All - /itemhistory",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:5000/itemhistory",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"itemhistory"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Search",
+					"item": [
+						{
+							"name": "Search - /search/{searchterm}",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:5000/search/xbox",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"search",
+										"xbox"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "SellerInsight",
+					"item": [
+						{
+							"name": "Get Revenue - /sellerinsight/{itemId}",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://api.shmoozed.com/sellerinsight/92",
+									"protocol": "http",
+									"host": [
+										"api",
+										"shmoozed",
+										"com"
+									],
+									"path": [
+										"sellerinsight",
+										"92"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Profit - /selerinsight/profit/{itemId}/{cost}",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://api.shmoozed.com/sellerinsight/profit/92/100",
+									"protocol": "http",
+									"host": [
+										"api",
+										"shmoozed",
+										"com"
+									],
+									"path": [
+										"sellerinsight",
+										"profit",
+										"92",
+										"100"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Seller Items",
+					"item": [
+						{
+							"name": "Get All - /item/seller",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{auth_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:5000/item/seller",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"item",
+										"seller"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All for Seller - /item/seller/{seller_id}",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{auth_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:5000/item/seller/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"item",
+										"seller",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All (Detailed) for Seller - /item/seller/{seller_id}/details",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{auth_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:5000/item/seller/:seller_id/details",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"item",
+										"seller",
+										":seller_id",
+										"details"
+									],
+									"variable": [
+										{
+											"key": "seller_id",
+											"value": "2",
+											"description": "The ID of the Seller"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add New Seller Item - /item/seller",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{auth_token}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"itemId\": 1,\n\t\"price\": 15.50,\n\t\"userId\": 2\n}"
+								},
+								"url": {
+									"raw": "http://localhost:5000/item/seller",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"item",
+										"seller"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Seller Item - /item/seller/{seller_item_id}",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{auth_token}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:5000/item/seller/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"item",
+										"seller",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:5000/item/seller/update/:item_id",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"itemId\": 91,\n\t\"price\": 22.53,\n\t\"userId\": 2,\n\t\"sellerCost\":25.50\n}"
+								},
+								"url": {
+									"raw": "http://localhost:5000/item/seller/update/:item_id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"item",
+										"seller",
+										"update",
+										":item_id"
+									],
+									"variable": [
+										{
+											"key": "item_id",
+											"value": "90"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "User",
+					"item": [
+						{
+							"name": "/user/authorizations",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{auth_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:5000/user/authorization",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"user",
+										"authorization"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/user/username/{username}",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{auth_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:5000/user/username/oneWorkingExample",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"user",
+										"username",
+										"oneWorkingExample"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All - /user",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{auth_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:5000/user",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add New User - /user",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{auth_token}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"firstName\" : \"Test\",\n\t\"lastName\" : \"McTesterson\",\n\t\"email\" : \"test@test.com\",\n\t\"password\" : \"MySuperSecretPassword\",\n\t\"username\" : \"test.mctester\"\n}"
+								},
+								"url": {
+									"raw": "localhost:5000/user",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get User By ID - /user/{id}",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{auth_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:5000/user/1",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"user",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete User By ID - /user/{id}",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{auth_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:5000/user/1",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"user",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "User Role",
+					"item": [
+						{
+							"name": "Get UserRole By UserRoleID - /userrole/{userRoleid}",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{auth_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:5000/userrole/10002",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"userrole",
+										"10002"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All UserRoles By UserID - /userrole/getallrolesforuserid/{userId}",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{auth_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:5000/userrole/getallrolesforuserid/2",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"userrole",
+										"getallrolesforuserid",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "User is Buyer - /userrole/userisbuyer/{user_id}",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{auth_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:5000/userrole/userisbuyer/3",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"userrole",
+										"userisbuyer",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "User is Seller - /userrole/userisseller/{user_id}",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{auth_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:5000/userrole/userisbuyer/3",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"userrole",
+										"userisbuyer",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "User is Admin - /userrole/userisadmin/{user_id}",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{auth_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:5000/userrole/userisadmin/3",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"userrole",
+										"userisadmin",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add New User Role - /userrole",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{auth_token}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"user_Id\" : 3,\n\t\"role_Id\" : 2\n}"
+								},
+								"url": {
+									"raw": "localhost:5000/userrole",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"userrole"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete UserRole By UserRoleID - /userrole/{userRoleid}",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{auth_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:5000/userrole/10003",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"userrole",
+										"10003"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Walmart",
+					"item": [
+						{
+							"name": "Get WalmartItem by Id - /walmart/itemid/{item_id}",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:5000/walmart/itemid/814913483",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"walmart",
+										"itemid",
+										"814913483"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Search WalmartItem - /walmart/search/{searchterm}",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:5000/walmart/search/xbox",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"walmart",
+										"search",
+										"xbox"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add New WalmartItem by Url - /walmart/url",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "\"https://www.walmart.com/ip/Lego-Classic-Bricks-On-A-Roll-10715-60Th-Anniversary-Limited-Edition/867645281\""
+								},
+								"url": {
+									"raw": "http://localhost:5000/walmart/url",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"walmart",
+										"url"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add New WalmartItem by BuyerDetails - /walmart/buyerdetails",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "\"https://www.walmart.com/ip/Lego-Classic-Bricks-On-A-Roll-10715-60Th-Anniversary-Limited-Edition/867645281\""
+								},
+								"url": {
+									"raw": "http://localhost:5000/walmart/urlbuyerdetails?quantity=2&price=19.99&userId=2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"walmart",
+										"urlbuyerdetails"
+									],
+									"query": [
+										{
+											"key": "quantity",
+											"value": "2"
+										},
+										{
+											"key": "price",
+											"value": "19.99"
+										},
+										{
+											"key": "userId",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Item",
+					"item": [
+						{
+							"name": "Get All Items - /item",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:5000/item",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"item"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Item By Name - /item/names?partial=Item",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:5000/item/names?partial=Bleach",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"item",
+										"names"
+									],
+									"query": [
+										{
+											"key": "partial",
+											"value": "Bleach"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Insert New Item - /item",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\" : \"Inserted Item 3\",\n\t\"quantity\" : 3\n}"
+								},
+								"url": {
+									"raw": "http://localhost:5000/item",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"item"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Item By Id - /example/item/5",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:5000/item/5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"item",
+										"5"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Top Items - /item/top",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:5000/item/top",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"item",
+										"top"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "/example/item",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:5000/example/item",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"example",
+								"item"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/example/item/names?partial=Item",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:5000/example/item/names?partial=Item",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"example",
+								"item",
+								"names"
+							],
+							"query": [
+								{
+									"key": "partial",
+									"value": "Item"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/example/item",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\" : \"Inserted Item 3\",\n\t\"quantity\" : 3\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/example/item",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"example",
+								"item"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/example/item/5",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:5000/example/item/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"example",
+								"item",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Vendor",
+			"item": [
+				{
+					"name": "BestBuy",
+					"item": [
+						{
+							"name": "Search",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://api.bestbuy.com/v1/products/search=xbox&apiKey=9hSBRQLAT9D8vc3Uo7H6uX1d",
+									"protocol": "https",
+									"host": [
+										"api",
+										"bestbuy",
+										"com"
+									],
+									"path": [
+										"v1",
+										"products",
+										"search=xbox&apiKey=9hSBRQLAT9D8vc3Uo7H6uX1d"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "testtoken",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "bb4f8fd8-0069-465d-8982-b882cc9c6efe",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "c66fa5fc-d07e-4dcc-ab06-8a04af2e8ad4",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

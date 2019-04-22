@@ -1,0 +1,60 @@
+::ng-deep .price-header {
+  background-color: #effff7 !important;
+  padding: 5px !important;
+}
+
+::ng-deep .historical-header {
+  background-color: #e0ebff !important;
+  padding: 5px !important;
+}
+
+::ng-deep .top5-header {
+  background-color: #ffeaea !important;
+  padding: 5px !important;
+}
+
+::ng-deep .insights-header {
+  background-color: #fff7db !important;
+  padding: 5px !important;
+}
+
+::ng-deep .mat-card-title {
+  font-size: 16px !important;
+  margin-top: 2px !important;
+  padding: 0px !important;
+}
+
+::ng-deep .mat-card {
+  margin: 10px !important;
+  padding: 5px;
+  overflow: auto;
+  height: 300px;
+}
+
+::ng-deep .card-body {
+  overflow: auto;
+  height: 300px;
+}
+
+.col-md-8 >>> .mat-card {
+  height: auto;
+}
+
+.col-md-8 >>> .card-body {
+  height: auto;
+}
+
+::ng-deep .expandButton {
+  color: #868e96;
+  z-index: 3 !important;
+  float: right !important;
+  border: none !important;
+  outline:none !important;
+}
+
+.mat-tooltip {
+  font-size: 200% !important;
+}
+
+
+

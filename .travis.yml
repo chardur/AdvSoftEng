@@ -1,0 +1,84 @@
+dist: xenial
+language: java
+jdk:
+  - openjdk8
+sudo: false
+
+notifications:
+  # https://docs.travis-ci.com/user/notifications/
+  slack:
+    rooms: 
+      - cs3750group2:<SLACK_APP_KEY>#travis-ci
+    on_success: always
+    on_failure: always
+    template:
+      - "Repo *%{repository_slug}* `%{result}` build (<%{build_url}|#%{build_number}>) for commit (<%{compare_url}|%{commit}>) on branch `%{branch}`."
+      - "Execution time: *%{duration}*"
+      - "Message: %{message}"
+
+addons:
+  # https://docs.travis-ci.com/user/chrome
+  chrome: stable
+
+cache:
+  directories:
+  # Cache both Maven's .m2 directory and the installed node modules to speed up build
+  - $HOME/.m2
+  - $TRAVIS_BUILD_DIR/FrontEnd/node_modules
+before_cache:
+  - rm -rf $HOME/.m2/repository/com/shmoozed/
+
+before_install:
+  # Change into the Backend directory so that Travis can identify dependencies automatically
+  - cd BackEnd/shmoozed/
+
+script:
+  # Determine whether we are building on master
+  - export BRANCH=$(if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then echo $TRAVIS_BRANCH; else echo $TRAVIS_PULL_REQUEST_BRANCH; fi)
+  - echo "~~~~~~~~~~ TRAVIS_BRANCH=$TRAVIS_BRANCH, PR=$PR, BRANCH=$BRANCH"
+
+  # Perform Backend build
+  - echo "%%%%%%%%%%% LAUNCHING BACKEND BUILD %%%%%%%%%%%"
+  - mvn clean install
+
+  # Perform Frontend build
+  - echo "%%%%%%%%%%% LAUNCHING FRONTEND BUILD %%%%%%%%%%%"
+  - cd ../../FrontEnd/
+  - npm install
+  - npm install -g @angular/cli
+  - npm install -g protractor
+  - webdriver-manager update --versions.chrome 2.46
+  - ng build
+  - ng test --watch=false --progress=false --browsers=ChromeHeadlessCI
+
+  # Deploy Frontend using SCP
+  - if [ "$BRANCH" == "master" ]; then echo "%%%%%%%%%%% LAUNCHING FRONTEND DEPLOY %%%%%%%%%%%"; node sftp; else echo "%%%%%%%%%%% NOT ON MASTER BRANCH, SKIPPING FRONTEND DEPLOY %%%%%%%%%%"; fi;
+
+# Deploy the Backend to Elasticbeanstalk
+deploy:
+  # For some weird reason, Travis decides that it is a good idea to blow away everything it made during the build phase... 
+  # The "skip_cleanup" stops that from happening. See https://docs.travis-ci.com/user/job-lifecycle/#deploying-your-code
+  skip_cleanup: true
+  provider: elasticbeanstalk
+  access_key_id: <ACCESS_KEY>
+  secret_access_key:
+    secure: <ACCESS_SECRET>
+  region: us-east-2
+  app: shmoozed-backend-api
+  env: ShmoozedBackendApi-env
+  bucket_name: elasticbeanstalk-us-east-2-<BUCKET_ID>
+  # Although this says "zip_file" it really means "deploy_file" so point it directly at the jar file
+  zip_file: '/home/travis/build/cowancs3750fall18/semesterproject-group-2/BackEnd/shmoozed/target/shmoozed-0.3.2.jar'
+  on:
+    repo: cowancs3750fall18/semesterproject-group-2
+    branch: master
+
+# Run Acceptance / Integration Tests
+after_deploy:
+  - echo "%%%%%%%%%%% LAUNCHING ACCEPTANCE / INTEGRATION TESTS %%%%%%%%%%%"
+  # Travis, for whatever reason, chose NOT to make failures in the "after_deploy" actually fail your
+  # build. This choice seems quite odd, but its the way it is. Because of that we have to manaully
+  # cause a failure by calling "travis_terminate".
+  # See https://docs.travis-ci.com/user/job-lifecycle/#breaking-the-build and https://github.com/travis-ci/travis-ci/issues/1574
+  - if ! protractor conf.js; then travis_terminate 1; fi
+

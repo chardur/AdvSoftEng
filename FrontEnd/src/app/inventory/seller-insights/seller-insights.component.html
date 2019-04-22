@@ -1,0 +1,15 @@
+<mat-card>
+  <mat-card-header class="insights-header">
+    <mat-card-title *ngIf="!profitForecast">Revenue Forecast:</mat-card-title>
+    <mat-card-title *ngIf="profitForecast">Profit Forecast:</mat-card-title>
+    <mat-card-subtitle *ngIf="chartHasData">Show me the money!</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <div *ngIf="chart && chartHasData">
+      <canvas #canvas id="canvas">{{ chart }}</canvas>
+    </div>
+    <div *ngIf="!chartHasData">
+      <p>There are no unfulfilled requests for this item.</p>
+    </div>
+  </mat-card-content>
+</mat-card>

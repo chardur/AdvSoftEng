@@ -1,0 +1,93 @@
+<!-- Credit given where credit due: -->
+<!-- This page is based on the bootstrap example at https://getbootstrap.com/docs/4.1/examples/carousel/ -->
+<body>
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand mr-1" routerLink="/onboard">
+      <img class="img-responsive" src="assets/images/logoSmallLight.png" alt="Shmoozed"> Shmoozed.com
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<main role="main">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="first-slide" src="assets/images/homePage/fistBump2.jpg" alt="First slide">
+        <div class="container">
+          <div class="carousel-caption text-left">
+            <h1>Buyers and sellers BOTH win!</h1>
+            <p>Shmoozed buyers pay less for the items they want. Shmoozed sellers maximize profit and sell more items.
+              Check out the details below!</p>
+            <p><a class="btn btn-outline-success my-2 my-sm-0" routerLink="/onboard" role="button">Log In</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
+  <div class="container marketing">
+    <!-- START THE FEATURETTES -->
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Shmoozed seller tools.<br><span class="text-muted">It'll blow your mind.</span></h2>
+        <p class="lead">Advanced charting, along with buyer pricing insights and historical pricing,
+          allow you to find your maximum profit. You'll have access to more buyers, and insights to avoid paying too much for inventory.</p>
+        <p><a class="btn btn-secondary" routerLink="/onboard" role="button">View details &raquo;</a></p>
+      </div>
+      <div class="col-md-5">
+        <img class="featurette-image img-fluid mx-auto" src="assets/images/homePage/sellerChart.png" alt="Generic placeholder image">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">Shmoozed buyer tools.<br><span class="text-muted">Oh yeah, it's that good!<br></span></h2>
+        <p class="lead">Name your price. We'll let you know when the item hits your target. You'll also have access
+          to historical pricing and advanced charting to make sure you never over-pay again!</p>
+        <p><a class="btn btn-secondary" routerLink="/onboard" role="button">View details &raquo;</a></p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <img class="featurette-image img-fluid mx-auto" src="assets/images/homePage/buyerChart.jpg" alt="Generic placeholder image">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+        <p class="lead">What are you waiting for? Sign up already!</p>
+        <p><a class="btn btn-secondary" routerLink="/onboard" role="button">View details &raquo;</a></p>
+      </div>
+      <div class="col-md-5">
+        <img class="featurette-image img-fluid mx-auto" src="assets/images/homePage/Lady_Box_Sledding.gif" alt="Generic placeholder image">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+
+  </div><!-- /.container -->
+
+
+  <!-- FOOTER -->
+  <footer class="container">
+    <p class="float-right"><a href="#">Back to top</a></p>
+    <p>&copy; 2017-2018 Shmoozed</p>
+  </footer>
+</main>
+
+</body>

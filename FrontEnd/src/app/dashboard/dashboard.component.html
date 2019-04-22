@@ -1,0 +1,39 @@
+<div class="data-card data-card-page-titles" matRipple fxFlex="32" fxFlex.xs="100">
+  <div class="data-card-icon">
+    <mat-icon>dashboard</mat-icon>
+  </div>
+  <div class="data-card-text" style="padding-top: 5px">
+     <img src="/assets/images/logoSmallDark.png" height="32" width="32"/>&nbsp;Quick View of your <strong>Dashboard</strong>
+  </div>
+</div>
+
+<ng-container>
+  <div class="chart-table">
+    <div class="doughnut-right">
+      <app-doughnut-chart></app-doughnut-chart>
+    </div>
+    <div class="chart-left">
+      <app-chart></app-chart>
+    </div>
+  </div>
+  <br />
+  <div>
+    <app-table></app-table>
+  </div>
+</ng-container>
+
+<div class="card-body">
+  <input [(ngModel)]="addProductData.name" size = 20 placeholder="Name"/>
+  <input [(ngModel)]="addProductData.quantity" size = 3 placeholder="Quantity"/>
+  <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+    <button mat-raised-button color="primary"  (click)="addProduct()">Add Item</button>
+  </form>
+</div>
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+

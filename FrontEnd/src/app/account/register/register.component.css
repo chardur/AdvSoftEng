@@ -1,0 +1,12 @@
+mat-radio-button {
+    padding-right: 10px !important;
+}
+
+#formContainer {
+    text-align: center;
+}
+
+.error {
+    color: red;
+    font-weight: 500;
+}

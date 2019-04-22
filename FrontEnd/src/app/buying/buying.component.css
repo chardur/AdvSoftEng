@@ -1,0 +1,35 @@
+table {
+    width: 100%;
+}
+
+button {
+    margin-right: 10px;
+}
+
+th {
+    font-size: 100%;
+}
+
+/* .buyer-table {
+    margin-left: 50%;
+	margin-right: 50%;
+} */
+
+.contentContainer {
+    text-align: left;
+    width: 400px;
+    float: left;
+}
+
+.buttonContainer {
+    text-align: right;
+    margin-left: 420px;
+  float: right;
+}
+
+.buyerInformation {
+  width: 100%;
+
+  overflow: hidden;
+
+}

@@ -1,0 +1,35 @@
+<table>
+  <tr>
+    <th><img src="./assets/images/walmart-logo.png" height="55" width="189"/></th>
+    <th><img src="./assets/images/best-buy-logo.png" height="67" width="96"/></th>
+  </tr>
+  <tr>
+    <td style="width: 400px; vertical-align: top">
+      <ngx-datatable
+        #table
+        class='material table table-bordered'
+        [columns]="columns"
+        [columnMode]="'force'"
+        [headerHeight]="50"
+        [footerHeight]="50"
+        [rowHeight]="'auto'"
+        [limit]="3"
+        [rows]='walmartTable'>
+      </ngx-datatable>
+    </td>
+    <td style="width: 400px; vertical-align: top">
+        <ngx-datatable
+          #table
+          class='material table table-bordered'
+          [columns]="columns"
+          [columnMode]="'force'"
+          [headerHeight]="50"
+          [footerHeight]="50"
+          [rowHeight]="'auto'"
+          [limit]="3"
+          [rows]='bestbuyTable'>
+        </ngx-datatable>
+
+    </td>
+  </tr>
+</table>

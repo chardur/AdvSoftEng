@@ -1,0 +1,48 @@
+<!-- <script src="https://apis.google.com/js/platform.js" async defer></script> -->
+<div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+<div id ="formContainer">
+  <div>
+    <mat-form-field appearance="outline">
+      <mat-label>First Name</mat-label>
+      <input matInput placeholder="" required [(ngModel)]="user.firstName" id = "firstNameInput"/>
+      <mat-hint>Max 50 Characters</mat-hint>
+    </mat-form-field>
+    <br />
+    <mat-form-field appearance="outline">
+      <mat-label>Last Name</mat-label>
+      <input matInput placeholder="" required [(ngModel)]="user.lastName" id = "lastNameInput"/>
+      <mat-hint>Max 50 Characters</mat-hint>
+    </mat-form-field>
+    <br />
+    <mat-form-field appearance="outline">
+      <mat-label>Email</mat-label>
+      <input matInput placeholder="" required [(ngModel)]="user.email" id = "emailInput"/>
+      <mat-hint>Max 100 Characters</mat-hint>
+    </mat-form-field>
+    <br/>
+    <mat-form-field appearance="outline">
+      <mat-label>Username</mat-label>
+      <input matInput placeholder="" required [(ngModel)]="user.username" id = "usernameInput"/>
+      <mat-hint *ngIf="duplicateUser" class="error">Username is already taken.</mat-hint>
+    </mat-form-field>
+    <br />
+    <mat-form-field type="password" appearance="outline" name="password">
+      <mat-label>Password</mat-label>
+      <input matInput placeholder="" [type]="hide ? 'password' : 'text'" required [(ngModel)]="user.password" id = "passwordInput"/>
+      <mat-hint>Case sensitive. No spaces</mat-hint>
+    </mat-form-field>
+    <br />
+    <div>
+      <mat-radio-group [(ngModel)]="role">
+        <mat-radio-button value=1 checked id = "buyerRadioButton">Buyer</mat-radio-button>
+        <mat-radio-button value=2 id = "sellerRadioButton">Seller</mat-radio-button>
+        <mat-radio-button value=3 id = "bothRadioButton">Both</mat-radio-button>
+      </mat-radio-group>
+    </div>
+    
+    <div class="form-group">
+      <button class="btn btn-primary" (click)="register()" id = "registerButton">Register</button>
+      <a [routerLink]="['/login']" class="btn btn-link">Cancel</a>
+    </div>
+  </div>
+</div>

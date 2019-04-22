@@ -1,0 +1,62 @@
+<div class="data-card data-card-page-titles" matRipple fxFlex="32" fxFlex.xs="100">
+  <div class="data-card-icon">
+    <mat-icon>shopping_basket</mat-icon>
+  </div>
+  <div class="data-card-text" style="padding-top: 5px">
+    &nbsp;<img src="/assets/images/logoSmallDark.png" height="32" width="32"/> Items to <strong>Buy</strong>
+  </div>
+</div>
+<div style="width: 100%; overflow: hidden;">
+  <div id="gallery" style="width: 500px; float: left;"> <app-gallery></app-gallery></div>
+  <div id="search" style="margin-left: 520px;">
+    <app-table-buyersearch></app-table-buyersearch>
+  </div>
+</div>
+
+<div class="data-card data-card-page-titles" matRipple fxFlex="32" fxFlex.xs="100">
+  <div class="data-card-icon">
+    <mat-icon>shopping_basket</mat-icon>
+  </div>
+  <div class="data-card-text" style="padding-top: 5px">
+    &nbsp;<img src="/assets/images/logoSmallDark.png" height="32" width="32"/> Browse your Watched <strong>Items</strong>
+  </div>
+</div>
+<button mat-raised-button color="primary" id="addItem" style="float: right;" (click)="openAddWalmartItemDialog()">Add Item to Your Watchlist</button>
+<div class="contentContainer" id="watchList" style="width: 100%;">
+  <app-table-buyeritems style="width: 100%;"></app-table-buyeritems>
+</div>
+<!-- add walmart item by url
+<div class="row">
+  <div class="col-md-auto"><p style="margin-top: 18px">Delete an item using a walmart url: </p></div>
+  <div class="col-md-auto">
+    <mat-form-field>
+      <input [(ngModel)]="walmartURL" matInput placeholder="enter walmart url here">
+    </mat-form-field>
+  </div>
+  <div class="col-md-auto">
+    <button mat-raised-button color="primary" style="margin-top: 10px" (click)="addWalmartItem(walmartURL)">Delete Walmart Item</button>
+  </div>
+</div> -->
+<!-- add walmart buyer details by url -->
+<!-- <div class="row">
+  <div class="col-md-auto"><p style="margin-top: 18px">Add an item using a walmart url: </p></div>
+  <div class="col-md-auto">
+    <mat-form-field>
+      <input [(ngModel)]="walmartBuyerDetailURL" matInput placeholder="enter walmart url here">
+    </mat-form-field>
+  </div>
+  <div class="col-md-auto">
+    <mat-form-field>
+      <input [(ngModel)]="walmartBuyerDetailPrice" matInput type="number" matInput placeholder="enter price target">
+    </mat-form-field>
+  </div>
+  <div class="col-md-auto">
+    <mat-form-field>
+      <input [(ngModel)]="walmartBuyerDetailQuantity" matInput type="number" matInput placeholder="enter quantity">
+    </mat-form-field>
+  </div>
+  <div class="col-md-auto">
+    <button mat-raised-button color="primary" style="margin-top: 10px"
+            (click)="addWalmartBuyerDetails(walmartBuyerDetailQuantity, walmartBuyerDetailPrice, 2, walmartBuyerDetailURL)">Add Walmart Item</button>
+  </div>
+</div> -->

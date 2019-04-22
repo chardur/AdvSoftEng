@@ -1,0 +1,51 @@
+
+<!-- Page Title -->
+<div class="data-card data-card-page-titles" matRipple fxFlex="32" fxFlex.xs="100">
+  <div class="data-card-icon">
+    <mat-icon>account_circle</mat-icon>
+  </div>
+  <div class="data-card-text" style="padding-top: 5px">
+    &nbsp;<img src="/assets/images/logoSmallDark.png" height="32" width="32"/> Your <strong>Account</strong>
+  </div>
+</div>
+<!-- end Page Title -->
+
+<mat-tab-group mat-stretch-tabs class="example-stretched-tabs mat-elevation-z4"  animationDuration="0ms">
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon class="example-tab-icon">check</mat-icon>
+      Login
+    </ng-template>
+    <ng-template matTabContent>
+      <div class="account-page-contents">
+        <app-login></app-login>
+      </div>
+    </ng-template>
+  </mat-tab>
+
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon class="example-tab-icon">list_alt</mat-icon>
+      Register
+    </ng-template>
+     <ng-template matTabContent>
+      <div class="account-page-contents">
+        <app-register></app-register>
+      </div>
+    </ng-template>
+  </mat-tab>
+
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon class="example-tab-icon">border_color</mat-icon>
+      Manage Account
+    </ng-template>
+    <ng-template matTabContent>
+    <div class="account-page-contents">
+      <app-admin></app-admin>
+    </div>
+    </ng-template>
+  </mat-tab>
+</mat-tab-group>
+
+

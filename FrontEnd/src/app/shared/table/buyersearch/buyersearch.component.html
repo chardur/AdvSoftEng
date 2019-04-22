@@ -1,0 +1,52 @@
+
+  <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+    <div class="input-group">
+      <input (input) = "searchedItem = $event.target.value" size="50" type="search" class="form-control" placeholder="Search Retailers for Items to Track..." aria-label="Search" aria-describedby="basic-addon2">
+      <div class="input-group-append">
+        <button class="btn btn-primary btn-green" type="button" (click)="getBuyerSearchItems(this.searchedItem); searchStarted = true">
+          <fa name="search"></fa>
+        </button>
+      </div>
+    </div>
+  </form>
+
+  <div class="tableContainer">
+    <h2><span *ngIf="!searchStarted">We thought you might Like </span><strong>Results</strong> For:</h2><h3> {{this.searchedItem}}</h3>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8"  matSort>
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let buyerItem" matTooltip="{{buyerItem.categoryPath}}"> <a [routerLink]="" (click)="openBottomSheetSearch(buyerItem.name)">
+        {{buyerItem.name.substring(0,50)}}</a>
+        <span *ngIf="buyerItem.name.length > 50">...  </span> </td>
+    </ng-container>
+    <ng-container matColumnDef="thumbnail">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Image </th>
+      <td mat-cell *matCellDef="let buyerItem"> <a (click)="openBottomSheetImage(buyerItem.name, buyerItem.largeImage)"> <img src="{{buyerItem.thumbnailImage}}"/></a>  </td>
+    </ng-container>
+    <ng-container matColumnDef="price">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Item Retail Price </th>
+      <td mat-cell *matCellDef="let buyerItem"> <del>{{buyerItem.msrp | currency}}</del> </td>
+    </ng-container>
+
+    <ng-container matColumnDef="salePrice">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Sale Price </th>
+      <td mat-cell *matCellDef="let buyerItem"> {{buyerItem.salePrice | currency}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Actions">
+      <th mat-header-cell *matHeaderCellDef> Actions </th>
+      <td mat-cell *matCellDef="let buyerItem">
+        <a target="_blank" id="buybutton" href="{{buyerItem.addToCartUrl}}">
+          <button matTooltip="Model Number: {{buyerItem.modelNumber}}" mat-raised-button color="primary" *ngIf="buyerItem.addToCartUrl">
+            Get More Info
+          </button>
+        </a>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+  </table>
+  <mat-paginator [pageSizeOptions]="[5, 10, 25]" [pageSize]="pageSizeSelection" (page)="pageEvent = handlePage($event)"></mat-paginator>
+</div>
